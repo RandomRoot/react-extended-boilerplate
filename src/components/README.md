@@ -1,0 +1,1 @@
+Folder for shared components (used in many pages)

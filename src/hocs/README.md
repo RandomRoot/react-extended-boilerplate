@@ -1,0 +1,1 @@
+Folder for Higher-Order Components.

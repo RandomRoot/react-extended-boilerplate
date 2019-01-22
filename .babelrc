@@ -1,0 +1,79 @@
+{
+  "env": {
+    "development": {
+      "presets": [[
+        "@babel/preset-env",
+                {
+                    "debug": false,
+                    "targets": {
+                        "node": "8.11.3",
+                        "browsers": [
+                            "last 3 versions"
+                        ]
+                    }
+                }
+       ], "@babel/preset-react"],
+      "plugins": [
+        "react-hot-loader/babel",
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-transform-async-to-generator",
+        ["react-css-modules", {
+          "context": "./src",
+          "generateScopedName": "[path][local]_[hash:base64:5]",
+          "filetypes": {
+            ".scss": {
+              "syntax": "postcss-scss",
+              "plugins": [
+                "postcss-nested"
+              ]
+            }
+          }
+        }]
+      ]
+    },
+    "production": {
+      "presets": [[
+        "@babel/preset-env",
+                {
+                    "debug": false,
+                    "targets": {
+                        "node": "8.11.3",
+                        "browsers": [
+                            "last 3 versions"
+                        ]
+                    }
+                }
+       ], "@babel/preset-react"],
+      "plugins": [
+        "react-hot-loader/babel",
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-transform-async-to-generator",
+        ["react-css-modules", {
+          "context": "./src",
+          "generateScopedName": "[path][local]_[hash:base64:5]",
+          "filetypes": {
+            ".scss": {
+              "syntax": "postcss-scss",
+              "plugins": [
+                "postcss-nested"
+              ]
+            }
+          }
+        }]
+      ]
+    },
+    "test": {
+      "presets": ["@babel/preset-env", "@babel/preset-react"],
+      "plugins" : [
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-transform-async-to-generator",
+        ["react-css-modules",
+          {
+            "generateScopedName": "[path][local]",
+            "handleMissingStyleName": "warn"
+          }
+        ]
+      ]
+    }
+  }
+}

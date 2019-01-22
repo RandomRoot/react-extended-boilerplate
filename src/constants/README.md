@@ -1,0 +1,1 @@
+Folder for any files with constants (like API urls, Error Codes and etc.)

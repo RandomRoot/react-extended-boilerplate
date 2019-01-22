@@ -1,0 +1,1 @@
+Folder for API Models. Use them to simplify your interaction with REST service
